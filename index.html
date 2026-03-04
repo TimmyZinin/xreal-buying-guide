@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XREAL One Pro — Варианты покупки в Турции</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f5f0;
+    color: #2d2d2d;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+  }
+  .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .product-card .specs {
+    flex: 1;
+  }
+  .product-card .specs h2 { font-size: 22px; color: #1a1a2e; }
+  .product-card .specs p { color: #555; margin-top: 6px; font-size: 14px; line-height: 1.5; }
+  .spec-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .spec-chip {
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .ref-price {
+    text-align: right;
+    min-width: 160px;
+  }
+  .ref-price .label { font-size: 12px; color: #888; }
+  .ref-price .price { font-size: 28px; font-weight: 700; color: #16a34a; }
+  .ref-price .price-sub { font-size: 13px; color: #999; text-decoration: line-through; }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    color: #1a1a2e;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 8px;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .option-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #ccc;
+    position: relative;
+  }
+  .option-card.best { border-left-color: #16a34a; }
+  .option-card.good { border-left-color: #2563eb; }
+  .option-card.mid { border-left-color: #f59e0b; }
+  .option-card.hard { border-left-color: #ef4444; }
+
+  .option-card .badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .badge.best-badge { background: #dcfce7; color: #16a34a; }
+  .badge.good-badge { background: #dbeafe; color: #2563eb; }
+  .badge.mid-badge { background: #fef3c7; color: #d97706; }
+  .badge.hard-badge { background: #fee2e2; color: #ef4444; }
+
+  .option-card h3 { font-size: 16px; margin-bottom: 6px; }
+  .option-card .source { font-size: 12px; color: #888; margin-bottom: 10px; }
+
+  .option-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .meta-item { font-size: 13px; }
+  .meta-item .label { color: #888; font-size: 11px; }
+  .meta-item .value { font-weight: 600; color: #333; }
+
+  .option-card .price-range {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 8px 0;
+  }
+  .option-card .desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+
+  .pros-cons {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .pro { color: #16a34a; }
+  .con { color: #ef4444; }
+
+  .customs-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 24px 0;
+  }
+  .customs-box h3 { color: #c2410c; font-size: 16px; margin-bottom: 10px; }
+  .customs-box p { font-size: 13px; color: #555; line-height: 1.6; }
+  .customs-box .highlight { font-weight: 700; color: #c2410c; }
+
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 13px;
+  }
+  .summary-table th {
+    background: #f1f5f9;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .summary-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #333;
+  }
+  .summary-table tr:hover { background: #fafafa; }
+  .verdict {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-radius: 14px;
+    padding: 24px;
+    margin-top: 24px;
+    border: 1px solid #bbf7d0;
+  }
+  .verdict h3 { color: #166534; font-size: 18px; margin-bottom: 10px; }
+  .verdict p { font-size: 14px; color: #333; line-height: 1.7; }
+  .verdict ol { margin-left: 20px; margin-top: 8px; font-size: 14px; line-height: 1.8; }
+
+  .note {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<h1>XREAL One Pro — Варианты покупки</h1>
+<p class="subtitle">Ты в Каше, Турция. Все варианты доставки и покупки на март 2026</p>
+
+<!-- Product Overview -->
+<div class="product-card">
+  <div class="specs">
+    <h2>XREAL One Pro</h2>
+    <p>AR-очки с чипом X1, Sony Micro-OLED, 120Hz, 57° FOV, экран 171", звук от Bose. Работают с iPhone, Mac, Steam Deck, PC через USB-C.</p>
+    <div class="spec-chips">
+      <span class="spec-chip">Sony Micro-OLED</span>
+      <span class="spec-chip">120Hz / 3ms</span>
+      <span class="spec-chip">57° FOV</span>
+      <span class="spec-chip">171" экран</span>
+      <span class="spec-chip">Sound by Bose</span>
+      <span class="spec-chip">3DoF (6DoF с Eye)</span>
+    </div>
+  </div>
+  <div class="ref-price">
+    <div class="label">Рефeренс (USA)</div>
+    <div class="price">$599</div>
+    <div class="price-sub">$769</div>
+    <div class="label" style="margin-top:4px">~22 500 TL по курсу</div>
+  </div>
+</div>
+
+<!-- CUSTOMS WARNING -->
+<div class="customs-box">
+  <h3>Таможня Турции (с 1 фев 2026 — новые правила!)</h3>
+  <p>Упрощённая система для посылок <span class="highlight">отменена</span>. Теперь стандартная процедура:</p>
+  <p style="margin-top:8px">
+    <span class="highlight">Из ЕС:</span> ~30% пошлина + 20% KDV (НДС) = итого ~56% сверху<br>
+    <span class="highlight">Не из ЕС (USA, Китай):</span> ~60% пошлина + 20% KDV = итого ~92% сверху<br>
+    <span class="highlight">Лимит без пошлины:</span> отменён. Пошлина с первого доллара.
+  </p>
+  <p style="margin-top:8px; font-weight:600; color:#c2410c;">Вывод: заказывать из-за рубежа с доставкой на турецкий адрес — очень дорого. Лучше покупать внутри Турции или привозить в багаже.</p>
+</div>
+
+<!-- OPTIONS -->
+<div class="section-title">Вариант A — Купить внутри Турции (без таможни)</div>
+<div class="options-grid">
+
+  <div class="option-card best">
+    <span class="badge best-badge">Лучший</span>
+    <h3>Sahibinden.com</h3>
+    <div class="source">Турецкий Авито, много объявлений</div>
+    <div class="price-range">35 000 — 50 000 TL</div>
+    <div class="desc">Много объявлений: новые (sifir) и б/у. Продавцы в Стамбуле, Анкаре, Измире. Можно договориться о карго в Каш.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Доставка</div><div class="value">Yurtici / PTT Kargo</div></div>
+      <div class="meta-item"><div class="label">Срок</div><div class="value">2-5 дней</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Нет</div></div>
+      <div class="meta-item"><div class="label">Гарантия</div><div class="value">От продавца</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Самый простой вариант, внутри страны</div>
+      <div class="pro">+ Без таможни и пошлин</div>
+      <div class="pro">+ Можно торговаться</div>
+      <div class="con">- Нет официальной гарантии</div>
+      <div class="con">- Нужно проверять продавца</div>
+    </div>
+  </div>
+
+  <div class="option-card good">
+    <span class="badge good-badge">Надежно</span>
+    <h3>Monofe.com (турецкий магазин)</h3>
+    <div class="source">Официальный ритейлер, цена с таможней</div>
+    <div class="price-range">62 990 TL</div>
+    <div class="desc">Цена включает все пошлины и доставку. Сейчас НЕТ В НАЛИЧИИ — можно подписаться на уведомление.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Доставка</div><div class="value">10 рабочих дней</div></div>
+      <div class="meta-item"><div class="label">Срок</div><div class="value">~2 недели</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Включена в цену</div></div>
+      <div class="meta-item"><div class="label">Гарантия</div><div class="value">Магазин</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Все пошлины включены</div>
+      <div class="pro">+ Официальный магазин</div>
+      <div class="con">- Нет в наличии</div>
+      <div class="con">- Дорого (~$1 680)</div>
+    </div>
+  </div>
+
+  <div class="option-card mid">
+    <span class="badge mid-badge">Ожидание</span>
+    <h3>Hepsiburada / Amazon.com.tr</h3>
+    <div class="source">Крупнейшие маркетплейсы Турции</div>
+    <div class="price-range">Пока нет в каталоге</div>
+    <div class="desc">На Hepsiburada есть XREAL Air / Air 2, но One Pro пока не появился. Amazon.com.tr — аналогично. Может появиться позже.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Доставка</div><div class="value">1-3 дня (когда появится)</div></div>
+      <div class="meta-item"><div class="label">Срок</div><div class="value">Неизвестно</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Нет</div></div>
+      <div class="meta-item"><div class="label">Гарантия</div><div class="value">Маркетплейс</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Простая покупка если появится</div>
+      <div class="con">- Пока нет в продаже</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-title">Вариант B — Заказ из-за рубежа напрямую</div>
+<div class="options-grid">
+
+  <div class="option-card mid">
+    <span class="badge mid-badge">Высокая пошлина</span>
+    <h3>AliExpress (Китай → Турция)</h3>
+    <div class="source">Прямая доставка в Турцию, несколько продавцов</div>
+    <div class="price-range">~$500-600 + таможня</div>
+    <div class="desc">Есть на AliExpress с бесплатной доставкой. НО: с 1 фев 2026 Турция отменила упрощённую таможню. Итого с пошлинами может выйти $960-1150.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Цена товара</div><div class="value">~$500-600</div></div>
+      <div class="meta-item"><div class="label">Пошлина</div><div class="value">~60% + 20% KDV</div></div>
+      <div class="meta-item"><div class="label">Итого</div><div class="value">~$960-1 150</div></div>
+      <div class="meta-item"><div class="label">Срок</div><div class="value">15-30 дней</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Доставляют в Турцию</div>
+      <div class="con">- Очень высокая пошлина (до 92%)</div>
+      <div class="con">- Долго</div>
+      <div class="con">- Риск задержки на таможне</div>
+    </div>
+  </div>
+
+  <div class="option-card hard">
+    <span class="badge hard-badge">Не шлют</span>
+    <h3>XREAL EU Shop (Европа)</h3>
+    <div class="source">Официальный магазин</div>
+    <div class="price-range">~€599-769</div>
+    <div class="desc">Шлют в 24 страны ЕС. Турция НЕ входит в список. Нельзя заказать напрямую.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Стран доставки</div><div class="value">24 (EU only)</div></div>
+      <div class="meta-item"><div class="label">Турция</div><div class="value">НЕТ</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="con">- Не доставляют в Турцию</div>
+      <div class="con">- Только ЕС</div>
+    </div>
+  </div>
+
+  <div class="option-card hard">
+    <span class="badge hard-badge">Сложно</span>
+    <h3>Amazon US → форвардинг → Турция</h3>
+    <div class="source">Через посредника (GlobalShopaholics и тд)</div>
+    <div class="price-range">$599 + $30-50 + таможня</div>
+    <div class="desc">Заказать на Amazon US → форвардинг-адрес в США → пересылка в Турцию. Пошлина 60%+ при ввозе. Итого ~$1 100+.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Товар</div><div class="value">$599</div></div>
+      <div class="meta-item"><div class="label">Форвардинг</div><div class="value">$30-50</div></div>
+      <div class="meta-item"><div class="label">Пошлина</div><div class="value">~60% + 20% KDV</div></div>
+      <div class="meta-item"><div class="label">Итого</div><div class="value">~$1 100-1 250</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="con">- Дорого после таможни</div>
+      <div class="con">- Сложная логистика</div>
+      <div class="con">- Долго (2-4 недели)</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-title">Вариант C — Через друзей / путешественников</div>
+<div class="options-grid">
+
+  <div class="option-card best">
+    <span class="badge best-badge">Оптимально</span>
+    <h3>Друг из ЕС привозит в багаже</h3>
+    <div class="source">Заказать в EU → друг везёт в Каш</div>
+    <div class="price-range">€599-769 (~$630-810)</div>
+    <div class="desc">Заказать на Amazon.de / XREAL EU Shop на адрес друга в ЕС. Друг привозит в Турцию как personal item в багаже. Нет таможни для личных вещей (до ~€430 duty-free лимит, но в багаже редко проверяют).</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Цена</div><div class="value">€599-769</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Нет (багаж)</div></div>
+      <div class="meta-item"><div class="label">Срок</div><div class="value">Зависит от друга</div></div>
+      <div class="meta-item"><div class="label">Риск</div><div class="value">Минимальный</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Цена как в Европе/США</div>
+      <div class="pro">+ Без пошлины</div>
+      <div class="pro">+ Надёжно</div>
+      <div class="con">- Нужен друг, летящий в Турцию</div>
+    </div>
+  </div>
+
+  <div class="option-card good">
+    <span class="badge good-badge">Альтернатива</span>
+    <h3>Друг из России / Украины</h3>
+    <div class="source">В РФ есть в продаже</div>
+    <div class="price-range">~80 000 RUB (~$810)</div>
+    <div class="desc">В России продаётся через technodeus.ru, vizzion.ru и др. (~80 000 RUB). Если кто-то летит из РФ — может привезти.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Цена РФ</div><div class="value">~80 000 RUB</div></div>
+      <div class="meta-item"><div class="label">Цена UA</div><div class="value">~36 000 UAH</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Нет (багаж)</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Есть в наличии</div>
+      <div class="con">- Нужен знакомый</div>
+      <div class="con">- Дороже чем в USA/EU</div>
+    </div>
+  </div>
+
+  <div class="option-card good">
+    <span class="badge good-badge">Если сам летишь</span>
+    <h3>Сам купить в поездке</h3>
+    <div class="source">При поездке в ЕС / Москву / Дубай</div>
+    <div class="price-range">$599-810</div>
+    <div class="desc">Если планируешь поездку в Европу, Москву или Дубай — купить на месте и привезти в Каш. Из Антальи есть прямые рейсы.</div>
+    <div class="option-meta">
+      <div class="meta-item"><div class="label">Откуда</div><div class="value">EU / RU / UAE</div></div>
+      <div class="meta-item"><div class="label">Таможня</div><div class="value">Нет</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pro">+ Самый надёжный способ</div>
+      <div class="pro">+ Можно проверить перед покупкой</div>
+      <div class="con">- Нужна поездка</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SUMMARY TABLE -->
+<div class="section-title">Сводная таблица</div>
+<table class="summary-table">
+  <thead>
+    <tr>
+      <th>Вариант</th>
+      <th>Цена (итого)</th>
+      <th>Срок</th>
+      <th>Сложность</th>
+      <th>Рекомендация</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sahibinden.com</strong></td>
+      <td>35 000-50 000 TL (~$930-1 330)</td>
+      <td>2-5 дней</td>
+      <td>Легко</td>
+      <td style="color:#16a34a; font-weight:700">Лучший если срочно</td>
+    </tr>
+    <tr>
+      <td><strong>Друг из ЕС (багаж)</strong></td>
+      <td>€599-769 (~$630-810)</td>
+      <td>Зависит от друга</td>
+      <td>Средне</td>
+      <td style="color:#16a34a; font-weight:700">Лучшая цена</td>
+    </tr>
+    <tr>
+      <td><strong>Сам в поездке</strong></td>
+      <td>$599-810</td>
+      <td>При поездке</td>
+      <td>Средне</td>
+      <td style="color:#2563eb; font-weight:600">Надёжно</td>
+    </tr>
+    <tr>
+      <td><strong>Monofe.com</strong></td>
+      <td>62 990 TL (~$1 680)</td>
+      <td>2 недели</td>
+      <td>Легко</td>
+      <td style="color:#d97706; font-weight:600">Дорого, нет в наличии</td>
+    </tr>
+    <tr>
+      <td><strong>AliExpress + таможня</strong></td>
+      <td>~$960-1 150</td>
+      <td>15-30 дней</td>
+      <td>Средне</td>
+      <td style="color:#d97706; font-weight:600">Дорого из-за пошлин</td>
+    </tr>
+    <tr>
+      <td><strong>Amazon US + форвардинг</strong></td>
+      <td>~$1 100-1 250</td>
+      <td>2-4 недели</td>
+      <td>Сложно</td>
+      <td style="color:#ef4444; font-weight:600">Не рекомендую</td>
+    </tr>
+    <tr>
+      <td><strong>XREAL EU Shop</strong></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td style="color:#ef4444; font-weight:600">Не шлют в Турцию</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- VERDICT -->
+<div class="verdict">
+  <h3>Мой вердикт — что делать</h3>
+  <ol>
+    <li><strong>Срочно нужны →</strong> Sahibinden.com. Цена выше (35-50K TL), но без головной боли. Очки уже в Турции, карго в Каш за 2-5 дней. Проверяй рейтинг продавца!</li>
+    <li><strong>Можешь подождать →</strong> Попроси друга из ЕС заказать на Amazon.de (~€599-650) и привезти в Каш. Экономия ~$400-500 vs Sahibinden.</li>
+    <li><strong>Планируешь поездку →</strong> Купи в Берлине, Амстердаме, Москве или Дубае. Самый надёжный и дешёвый способ.</li>
+  </ol>
+  <p style="margin-top:12px; color:#555;">Заказывать из-за рубежа напрямую в Турцию <strong>не стоит</strong> — с 1 фев 2026 пошлины съедают 60-92% от стоимости. AliExpress за $500 превращается в $1000+ на таможне.</p>
+</div>
+
+<p class="note">Данные собраны 4 марта 2026. Цены и наличие могут меняться. Курс: ~37.5 TL/$1</p>
+
+</body>
+</html>
